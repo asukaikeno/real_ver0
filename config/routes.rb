@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
 
-  get 'users/new'
+  root  'static_pages#home'
 
-  root 'static_pages#home'
-
-  get 'help' => 'static_pages#help'
+  get 'help'     => 'static_pages#help'
   get 'sign_up'  => 'users#new'
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+
+  get 'login'    => 'sessions#new'
+  post 'login'   => 'sessions#create'
   
+  delete 'logout'=> 'sessions#destroy'
+
 
   resources :users
+  resources :spots
 
   #get 'static_pages/help'　ひだり：もともとのURL
 
