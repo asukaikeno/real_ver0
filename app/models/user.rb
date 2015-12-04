@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   #パスワード設定
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
 
    # 与えられた文字列のハッシュ値を返す 
