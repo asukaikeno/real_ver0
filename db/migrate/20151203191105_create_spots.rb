@@ -6,7 +6,6 @@ class CreateSpots < ActiveRecord::Migration
       t.string :place
       t.string :cost
       t.string :link
-      t.string :user_id
 
       t.timestamps null: false
     end
